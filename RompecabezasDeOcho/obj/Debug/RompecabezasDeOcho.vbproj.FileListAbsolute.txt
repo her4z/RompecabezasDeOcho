@@ -1,0 +1,13 @@
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\obj\Debug\RompecabezasDeOcho.vbprojAssemblyReference.cache
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\obj\Debug\RompecabezasDeOcho.frmMain.resources
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\obj\Debug\RompecabezasDeOcho.frmMenu.resources
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\obj\Debug\RompecabezasDeOcho.Resources.resources
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\obj\Debug\RompecabezasDeOcho.vbproj.GenerateResource.cache
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\obj\Debug\RompecabezasDeOcho.vbproj.CoreCompileInputs.cache
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\bin\Debug\RompecabezasDeOcho.exe.config
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\bin\Debug\RompecabezasDeOcho.exe
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\bin\Debug\RompecabezasDeOcho.pdb
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\bin\Debug\RompecabezasDeOcho.xml
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\obj\Debug\RompecabezasDeOcho.exe
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\obj\Debug\RompecabezasDeOcho.xml
+D:\TPS\RompecabezasDeOcho\RompecabezasDeOcho\obj\Debug\RompecabezasDeOcho.pdb
