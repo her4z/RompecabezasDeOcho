@@ -15,7 +15,7 @@
         positions4x4(11) = New Integer() {350, 279}
         positions4x4(12) = New Integer() {107, 360}
         positions4x4(13) = New Integer() {188, 360}
-        positions4x4(14) = New Integer() {264, 360}
+        positions4x4(14) = New Integer() {269, 360}
         positions4x4(15) = New Integer() {350, 360}
 
         ' Populating 3x3 position's jagged array.
@@ -89,26 +89,29 @@
             btSixteen.Location = New Point(array(15)(0), array(15)(1))
 
         End If
-        positions = array
         Return array
 
     End Function
     Private Function MoveButton(ByVal position As Point)
         If mode = False Then
             If position.X = btNine.Location.X And (position.Y = btNine.Location.Y + 90 Or position.Y = btNine.Location.Y - 81 Or position.Y = btNine.Location.Y + 81 Or position.Y = btNine.Location.Y - 90) Then
-                MsgBox("Apto para moverse")
+                Return True
             ElseIf position.Y = btNine.Location.Y And (position.X = btNine.Location.X + 90 Or position.X = btNine.Location.X - 81 Or position.X = btNine.Location.X + 81 Or position.X = btNine.Location.X - 90) Then
-                MsgBox("Apto para moverse")
+                Return True
             End If
         Else
             If position.X = btSixteen.Location.X And (position.Y = btSixteen.Location.Y + 90 Or position.Y = btSixteen.Location.Y - 81 Or position.Y = btSixteen.Location.Y + 81 Or position.Y = btSixteen.Location.Y - 90) Then
-                MsgBox("Apto para moverse")
+                Return True
             ElseIf position.Y = btSixteen.Location.Y And (position.X = btSixteen.Location.X + 90 Or position.X = btSixteen.Location.X - 81 Or position.X = btSixteen.Location.X + 81 Or position.X = btSixteen.Location.X - 90) Then
-                MsgBox("Apto para moverse")
+                Return True
             End If
 
         End If
-        Return True
+        Return False
+
+    End Function
+    Private Function Won()
+        Return False
 
     End Function
 
@@ -117,67 +120,202 @@
     End Sub
 
     Private Sub btOne_Click(sender As Object, e As EventArgs) Handles btOne.Click
-        MoveButton(btOne.Location)
+        If MoveButton(btOne.Location) = True Then
+            Dim auxPos As Point = btOne.Location
+            If mode = False Then
+                btOne.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btOne.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btTwo_Click(sender As Object, e As EventArgs) Handles btTwo.Click
-        MoveButton(btTwo.Location)
+        If MoveButton(btTwo.Location) = True Then
+            Dim auxPos As Point = btTwo.Location
+            If mode = False Then
+                btTwo.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btTwo.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btThree_Click(sender As Object, e As EventArgs) Handles btThree.Click
-        MoveButton(btThree.Location)
+        If MoveButton(btThree.Location) = True Then
+            Dim auxPos As Point = btThree.Location
+            If mode = False Then
+                btThree.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btThree.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btFour_Click(sender As Object, e As EventArgs) Handles btFour.Click
-        MoveButton(btFour.Location)
+        If MoveButton(btFour.Location) = True Then
+            Dim auxPos As Point = btFour.Location
+            If mode = False Then
+                btFour.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btFour.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btFive_Click(sender As Object, e As EventArgs) Handles btFive.Click
-        MoveButton(btFive.Location)
+        If MoveButton(btFive.Location) = True Then
+            Dim auxPos As Point = btFive.Location
+            If mode = False Then
+                btFive.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btFive.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btSix_Click(sender As Object, e As EventArgs) Handles btSix.Click
-        MoveButton(btSix.Location)
+        If MoveButton(btSix.Location) = True Then
+            Dim auxPos As Point = btSix.Location
+            If mode = False Then
+                btSix.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btSix.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btSeven_Click(sender As Object, e As EventArgs) Handles btSeven.Click
-        MoveButton(btSeven.Location)
+        If MoveButton(btSeven.Location) = True Then
+            Dim auxPos As Point = btSeven.Location
+            If mode = False Then
+                btSeven.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btSeven.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btEight_Click(sender As Object, e As EventArgs) Handles btEight.Click
-        MoveButton(btEight.Location)
+        If MoveButton(btEight.Location) = True Then
+            Dim auxPos As Point = btEight.Location
+            If mode = False Then
+                btEight.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btEight.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btTwelve_Click(sender As Object, e As EventArgs) Handles btTwelve.Click
-        MoveButton(btTwelve.Location)
+        If MoveButton(btTwelve.Location) = True Then
+            Dim auxPos As Point = btTwelve.Location
+            If mode = False Then
+                btTwelve.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btTwelve.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btEleven_Click(sender As Object, e As EventArgs) Handles btEleven.Click
-        MoveButton(btEleven.Location)
+        If MoveButton(btEleven.Location) = True Then
+            Dim auxPos As Point = btEleven.Location
+            If mode = False Then
+                btEleven.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btEleven.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btTen_Click(sender As Object, e As EventArgs) Handles btTen.Click
-        MoveButton(btTen.Location)
+        If MoveButton(btTen.Location) = True Then
+            Dim auxPos As Point = btTen.Location
+            If mode = False Then
+                btTen.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btTen.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btNine_Click(sender As Object, e As EventArgs) Handles btNine.Click
-        MoveButton(btNine.Location)
+        If MoveButton(btNine.Location) = True Then
+            Dim auxPos As Point = btNine.Location
+            If mode = False Then
+                btNine.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btNine.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btThirteen_Click(sender As Object, e As EventArgs) Handles btThirteen.Click
-        MoveButton(btThirteen.Location)
+        If MoveButton(btThirteen.Location) = True Then
+            Dim auxPos As Point = btThirteen.Location
+            If mode = False Then
+                btThirteen.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btThirteen.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btFourteen_Click(sender As Object, e As EventArgs) Handles btFourteen.Click
-        MoveButton(btFourteen.Location)
+        If MoveButton(btFourteen.Location) = True Then
+            Dim auxPos As Point = btFourteen.Location
+            If mode = False Then
+                btFourteen.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btFourteen.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btFiveteen_Click(sender As Object, e As EventArgs) Handles btFiveteen.Click
-        MoveButton(btFiveteen.Location)
+        If MoveButton(btFiveteen.Location) = True Then
+            Dim auxPos As Point = btFiveteen.Location
+            If mode = False Then
+                btFiveteen.Location = btNine.Location
+                btNine.Location = auxPos
+            Else
+                btFiveteen.Location = btSixteen.Location
+                btSixteen.Location = auxPos
+            End If
+        End If
     End Sub
 
     Private Sub btSixteen_Click(sender As Object, e As EventArgs) Handles btSixteen.Click
-        MoveButton(btSixteen.Location)
+
     End Sub
 
     Private Sub btBackToMenu_Click(sender As Object, e As EventArgs) Handles btBackToMenu.Click
