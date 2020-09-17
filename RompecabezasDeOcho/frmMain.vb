@@ -51,7 +51,7 @@
         End If
 
     End Sub
-    Private Function PositionsRandomizer(ByRef array As Integer()())
+    Private Function PositionsRandomizer(ByVal array As Integer()())
         Dim rnd As New Random
         Dim arrayCount As Integer = array.Length - 1
         For i As Integer = 0 To arrayCount
@@ -89,7 +89,26 @@
             btSixteen.Location = New Point(array(15)(0), array(15)(1))
 
         End If
+        positions = array
         Return array
+
+    End Function
+    Private Function MoveButton(ByVal position As Point)
+        If mode = False Then
+            If position.X = btNine.Location.X And (position.Y = btNine.Location.Y + 90 Or position.Y = btNine.Location.Y - 81 Or position.Y = btNine.Location.Y + 81 Or position.Y = btNine.Location.Y - 90) Then
+                MsgBox("Apto para moverse")
+            ElseIf position.Y = btNine.Location.Y And (position.X = btNine.Location.X + 90 Or position.X = btNine.Location.X - 81 Or position.X = btNine.Location.X + 81 Or position.X = btNine.Location.X - 90) Then
+                MsgBox("Apto para moverse")
+            End If
+        Else
+            If position.X = btSixteen.Location.X And (position.Y = btSixteen.Location.Y + 90 Or position.Y = btSixteen.Location.Y - 81 Or position.Y = btSixteen.Location.Y + 81 Or position.Y = btSixteen.Location.Y - 90) Then
+                MsgBox("Apto para moverse")
+            ElseIf position.Y = btSixteen.Location.Y And (position.X = btSixteen.Location.X + 90 Or position.X = btSixteen.Location.X - 81 Or position.X = btSixteen.Location.X + 81 Or position.X = btSixteen.Location.X - 90) Then
+                MsgBox("Apto para moverse")
+            End If
+
+        End If
+        Return True
 
     End Function
 
@@ -98,67 +117,67 @@
     End Sub
 
     Private Sub btOne_Click(sender As Object, e As EventArgs) Handles btOne.Click
-
+        MoveButton(btOne.Location)
     End Sub
 
     Private Sub btTwo_Click(sender As Object, e As EventArgs) Handles btTwo.Click
-
+        MoveButton(btTwo.Location)
     End Sub
 
     Private Sub btThree_Click(sender As Object, e As EventArgs) Handles btThree.Click
-
+        MoveButton(btThree.Location)
     End Sub
 
     Private Sub btFour_Click(sender As Object, e As EventArgs) Handles btFour.Click
-
+        MoveButton(btFour.Location)
     End Sub
 
     Private Sub btFive_Click(sender As Object, e As EventArgs) Handles btFive.Click
-
+        MoveButton(btFive.Location)
     End Sub
 
     Private Sub btSix_Click(sender As Object, e As EventArgs) Handles btSix.Click
-
+        MoveButton(btSix.Location)
     End Sub
 
     Private Sub btSeven_Click(sender As Object, e As EventArgs) Handles btSeven.Click
-
+        MoveButton(btSeven.Location)
     End Sub
 
     Private Sub btEight_Click(sender As Object, e As EventArgs) Handles btEight.Click
-
+        MoveButton(btEight.Location)
     End Sub
 
     Private Sub btTwelve_Click(sender As Object, e As EventArgs) Handles btTwelve.Click
-
+        MoveButton(btTwelve.Location)
     End Sub
 
     Private Sub btEleven_Click(sender As Object, e As EventArgs) Handles btEleven.Click
-
+        MoveButton(btEleven.Location)
     End Sub
 
     Private Sub btTen_Click(sender As Object, e As EventArgs) Handles btTen.Click
-
+        MoveButton(btTen.Location)
     End Sub
 
     Private Sub btNine_Click(sender As Object, e As EventArgs) Handles btNine.Click
-
+        MoveButton(btNine.Location)
     End Sub
 
     Private Sub btThirteen_Click(sender As Object, e As EventArgs) Handles btThirteen.Click
-
+        MoveButton(btThirteen.Location)
     End Sub
 
     Private Sub btFourteen_Click(sender As Object, e As EventArgs) Handles btFourteen.Click
-
+        MoveButton(btFourteen.Location)
     End Sub
 
     Private Sub btFiveteen_Click(sender As Object, e As EventArgs) Handles btFiveteen.Click
-
+        MoveButton(btFiveteen.Location)
     End Sub
 
     Private Sub btSixteen_Click(sender As Object, e As EventArgs) Handles btSixteen.Click
-
+        MoveButton(btSixteen.Location)
     End Sub
 
     Private Sub btBackToMenu_Click(sender As Object, e As EventArgs) Handles btBackToMenu.Click
