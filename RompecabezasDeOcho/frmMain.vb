@@ -32,6 +32,7 @@
     Private Sub frmMain_Activated(sender As Object, e As EventArgs) Handles MyBase.Load
         If (mode = False) Then
             lbMode.Text = "Rompecabezas 3x3"
+            btNine.Text = ""
             ' 4x4 Buttons get hide.
             btTen.Hide()
             btEleven.Hide()
@@ -43,6 +44,7 @@
             PositionsRandomizer(positions3x3)
         Else
             lbMode.Text = "Rompecabezas 4x4"
+            btSixteen.Text = ""
             PositionsRandomizer(positions4x4)
 
 
