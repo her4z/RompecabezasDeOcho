@@ -111,8 +111,69 @@
 
     End Function
     Private Function Won()
+        ' This could be made prettier with a Dictionary or iterating positions list and comparing each list value with each controller Location value.
+        If mode = False Then
+            If btOne.Location.X = positions3x3(0)(0) AndAlso
+                btOne.Location.Y = positions3x3(0)(1) AndAlso
+                btTwo.Location.X = positions3x3(1)(0) AndAlso
+                btTwo.Location.Y = positions3x3(1)(1) AndAlso
+                btThree.Location.X = positions3x3(2)(0) AndAlso
+                btThree.Location.Y = positions3x3(2)(1) AndAlso
+                btFour.Location.X = positions3x3(3)(0) AndAlso
+                btFour.Location.Y = positions3x3(3)(1) AndAlso
+                btFive.Location.X = positions3x3(4)(0) AndAlso
+                btFive.Location.Y = positions3x3(4)(1) AndAlso
+                btSix.Location.X = positions3x3(5)(0) AndAlso
+                btSix.Location.Y = positions3x3(5)(1) AndAlso
+                btSeven.Location.X = positions3x3(6)(0) AndAlso
+                btSeven.Location.Y = positions3x3(6)(1) AndAlso
+                btEight.Location.X = positions3x3(7)(0) AndAlso
+                btEight.Location.Y = positions3x3(7)(1) AndAlso
+                btNine.Location.X = positions3x3(8)(0) AndAlso
+                btNine.Location.Y = positions3x3(8)(1) Then
+                MsgBox("Ganaste!")
+                PositionsRandomizer(positions3x3)
+                Return True
+            End If
+        Else
+            If btOne.Location.X = positions4x4(0)(0) AndAlso
+                btOne.Location.Y = positions4x4(0)(1) AndAlso
+                btTwo.Location.X = positions4x4(1)(0) AndAlso
+                btTwo.Location.Y = positions4x4(1)(1) AndAlso
+                btThree.Location.X = positions4x4(2)(0) AndAlso
+                btThree.Location.Y = positions4x4(2)(1) AndAlso
+                btFour.Location.X = positions4x4(3)(0) AndAlso
+                btFour.Location.Y = positions4x4(3)(1) AndAlso
+                btFive.Location.X = positions4x4(4)(0) AndAlso
+                btFive.Location.Y = positions4x4(4)(1) AndAlso
+                btSix.Location.X = positions4x4(5)(0) AndAlso
+                btSix.Location.Y = positions4x4(5)(1) AndAlso
+                btSeven.Location.X = positions4x4(6)(0) AndAlso
+                btSeven.Location.Y = positions4x4(6)(1) AndAlso
+                btEight.Location.X = positions4x4(7)(0) AndAlso
+                btEight.Location.Y = positions4x4(7)(1) AndAlso
+                btNine.Location.X = positions4x4(8)(0) AndAlso
+                btNine.Location.Y = positions4x4(8)(1) AndAlso
+                btTen.Location.X = positions4x4(9)(0) AndAlso
+                btTen.Location.Y = positions4x4(9)(1) AndAlso
+                btEleven.Location.X = positions4x4(10)(0) AndAlso
+                btEleven.Location.Y = positions4x4(10)(1) AndAlso
+                btTwelve.Location.X = positions4x4(11)(0) AndAlso
+                btTwelve.Location.Y = positions4x4(11)(1) AndAlso
+                btThirteen.Location.X = positions4x4(12)(0) AndAlso
+                btThirteen.Location.Y = positions4x4(12)(1) AndAlso
+                btFourteen.Location.X = positions4x4(13)(0) AndAlso
+                btFourteen.Location.Y = positions4x4(13)(1) AndAlso
+                btFiveteen.Location.X = positions4x4(14)(0) AndAlso
+                btFiveteen.Location.Y = positions4x4(14)(1) AndAlso
+                btSixteen.Location.X = positions4x4(15)(0) AndAlso
+                btSixteen.Location.Y = positions4x4(15)(1) Then
+                MsgBox("Ganaste!")
+                PositionsRandomizer(positions4x4)
+                Return True
+            End If
+        End If
         Return False
-
     End Function
 
     Private Sub lbMode_Click(sender As Object, e As EventArgs) Handles lbMode.Click
@@ -129,6 +190,7 @@
                 btOne.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -142,6 +204,7 @@
                 btTwo.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -155,6 +218,7 @@
                 btThree.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -168,6 +232,7 @@
                 btFour.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -181,6 +246,7 @@
                 btFive.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -194,6 +260,7 @@
                 btSix.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -207,6 +274,7 @@
                 btSeven.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -220,6 +288,7 @@
                 btEight.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -246,6 +315,7 @@
                 btEleven.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -259,6 +329,7 @@
                 btTen.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -272,6 +343,7 @@
                 btNine.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -285,6 +357,7 @@
                 btThirteen.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -298,6 +371,7 @@
                 btFourteen.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -311,6 +385,7 @@
                 btFiveteen.Location = btSixteen.Location
                 btSixteen.Location = auxPos
             End If
+            Won()
         End If
     End Sub
 
@@ -330,4 +405,5 @@
             PositionsRandomizer(positions4x4)
         End If
     End Sub
+
 End Class
